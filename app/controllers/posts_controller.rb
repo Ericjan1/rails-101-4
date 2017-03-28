@@ -1,6 +1,7 @@
 class PostsController < ApplicationController
 
   before_action :authenticate_user!, :only => [:new, :create]
+  before_action :authenticate_user!, :only => [:join]
 
   def new
     @group = Group.find(params[:group_id])
